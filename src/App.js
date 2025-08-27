@@ -24,12 +24,19 @@ import ErrorBoundary from './components/ErrorBoundary.js';
 import ClickCounter from './components/ClickCounter.js';
 import HoverCounter from './components/HoverCounter.js';
 import RenderCounter from './components/RenderCounter.js';
+import ComponentC from './components/ComponentC.js';
+import { UserProvider } from './components/userContext.js';
 
 function App() {
 
   return (
     <div className="App">
-       <RenderCounter render={(count,countIncrement)=>(
+      <UserProvider value="Rida">
+        <ComponentC />
+      </UserProvider>
+   
+
+       {/* <RenderCounter render={(count,countIncrement)=>(
           <ClickCounter count={count} countIncrement={countIncrement} />
        )
        }
@@ -39,7 +46,7 @@ function App() {
        )
        }
       />
-     
+      */}
        {/* <ErrorBoundary>
         <Hero heroname={'Batman'}/>
       <Hero heroname={'Spiderman'} />
