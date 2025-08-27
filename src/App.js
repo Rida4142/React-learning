@@ -23,13 +23,23 @@ import Hero from './components/Hero.js';
 import ErrorBoundary from './components/ErrorBoundary.js';
 import ClickCounter from './components/ClickCounter.js';
 import HoverCounter from './components/HoverCounter.js';
+import RenderCounter from './components/RenderCounter.js';
+
 function App() {
 
   return (
     <div className="App">
-
-      <ClickCounter />
-      <HoverCounter />
+       <RenderCounter render={(count,countIncrement)=>(
+          <ClickCounter count={count} countIncrement={countIncrement} />
+       )
+       }
+      />
+       <RenderCounter render={(count,countIncrement)=>(
+          <HoverCounter count={count} countIncrement={countIncrement} />
+       )
+       }
+      />
+     
        {/* <ErrorBoundary>
         <Hero heroname={'Batman'}/>
       <Hero heroname={'Spiderman'} />
