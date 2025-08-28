@@ -26,14 +26,17 @@ import HoverCounter from './components/HoverCounter.js';
 import RenderCounter from './components/RenderCounter.js';
 import ComponentC from './components/ComponentC.js';
 import { UserProvider } from './components/userContext.js';
+import PostList from './components/PostList.js';
 
 function App() {
 
   return (
     <div className="App">
-      <UserProvider value="Rida">
+
+      <PostList />
+      {/* <UserProvider value="Rida">
         <ComponentC />
-      </UserProvider>
+      </UserProvider> */}
    
 
        {/* <RenderCounter render={(count,countIncrement)=>(
