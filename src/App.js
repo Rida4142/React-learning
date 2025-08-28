@@ -27,13 +27,16 @@ import RenderCounter from './components/RenderCounter.js';
 import ComponentC from './components/ComponentC.js';
 import { UserProvider } from './components/userContext.js';
 import PostList from './components/PostList.js';
+import PostForm from './components/PostForm.js';
 
 function App() {
 
   return (
     <div className="App">
 
-      <PostList />
+
+      <PostForm />
+      {/* <PostList /> */}
       {/* <UserProvider value="Rida">
         <ComponentC />
       </UserProvider> */}
